@@ -51,10 +51,10 @@
                     <label for="cpf"> CPF</label>
                 </div>
                 <div class="input-field col s12">
-                    <input type="password" name="senha" id="senha" value="<?php echo $escrever['senha'] ?>">
+                    <input type="text" name="senha" id="senha" value="<?php echo $escrever['senha'] ?>">
                     <label for="senha"> Senha</label>
                 </div>
-                <button type="submit" name="btn-atualizar" class="btn">ATUALIZAR</button>
+                <button type="submit" name="btn-editar" class="btn">ATUALIZAR</button>
             </form>
         </div>
     </div>
