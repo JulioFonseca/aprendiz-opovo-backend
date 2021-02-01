@@ -7,8 +7,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
 	<?php 
 		//abrindo sessao para se comunicar entre os codigos
 		session_start();
@@ -38,13 +38,15 @@
 		<div class="col s12 m8 push-m2">
 			<h4 class="light">Clientes</h4>
 	<!--Tabela para READ Clientes-->
-	<table class='striped'>
+	<table>
 		<thead>
 			<tr>
 				<th>Nome</th>
 				<th>email</th>
 				<th>cpf</th>
 				<th>senha</th>
+				<th></th>
+				<th></th>
 			</tr>
 		</thead>
 			<tbody>
