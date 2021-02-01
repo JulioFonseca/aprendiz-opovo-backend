@@ -12,7 +12,7 @@
 	<?php 
 		//abrindo sessao para se comunicar entre os codigos
 		session_start();
-
+		//conexao com o banco de dados
 		require_once 'conexao.php'; 
 		$sql = "SELECT * FROM clientes";
 				$res = mysqli_query($conn, $sql); 
@@ -51,6 +51,7 @@
 		</thead>
 			<tbody>
 				<?php 
+				//comando para imprimir todos os clientes do banco de dados
 			if (mysqli_num_rows($res) > 0) {
 				while ($escrever = mysqli_fetch_array($res)) {
 				

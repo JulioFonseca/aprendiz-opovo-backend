@@ -17,18 +17,16 @@
 		//inserindo o cliente no banco de dados
 		$sql ="INSERT INTO clientes(nome, email, cpf, senha) VALUES('$nome','$email','$cpf','$senha')";
 		}else{
+			//caso houver error redirecionar para cadastro.php com mensagem de erro
 			header('Location: cadastro.php');
 			  $_SESSION['mensagem'] = "ERRO!! preencha todos os campos";
 		}
 
 		//verificando se houve um erro no cadastro
-		if (mysqli_query($conn, $sql)) {
-			      //echo "Cadastro realizado com sucesso";
+		if (mysqli_query($conn, $sql)) {  
 			    header('Location: index.php');
 		      	$_SESSION['mensagem'] = "cadastrado com sucesso";
 		} else {
-
-		      //echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 				header('Location: index.php');
 			  	$_SESSION['mensagem'] = "ERRO!! ao se cadastrar";
 			

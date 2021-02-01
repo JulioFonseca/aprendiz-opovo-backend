@@ -29,7 +29,7 @@
 
         if (isset($_GET['id'])) {
         $id = mysqli_escape_string($conn, $_GET['id']);
-
+        //exibir somente o clinte com a id que está na url
         $sql = "SELECT * FROM clientes WHERE id = '$id'";
         $res = mysqli_query($conn, $sql);
         $escrever = mysqli_fetch_array($res);

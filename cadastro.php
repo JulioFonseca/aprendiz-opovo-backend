@@ -8,7 +8,12 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
-	<?php require_once 'conexao.php'; session_start(); ?>
+	<?php 
+        //conexão com o banco de dados
+        require_once 'conexao.php';
+        //sessao para se comunicar entre os codigos 
+        session_start(); 
+    ?>
 </head>
 <body>
 	<?php
