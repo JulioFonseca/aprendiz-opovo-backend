@@ -1,6 +1,6 @@
 <?php
 	require_once 'conexao.php';
-	
+
 	//iniciando a sessao para mandar mensagem de erro ou de sucesso
 	session_start();
 
@@ -11,8 +11,15 @@
 		$cpf = $_POST['cpf'];
 		$senha = $_POST['senha'];
 
+		//verificando se o campo está vazio
+		if($nome != '' && $email != '' && $cpf != '' && $senha != '' ){
+			
 		//inserindo o cliente no banco de dados
 		$sql ="INSERT INTO clientes(nome, email, cpf, senha) VALUES('$nome','$email','$cpf','$senha')";
+		}else{
+			header('Location: cadastro.php');
+			  $_SESSION['mensagem'] = "ERRO!! preencha todos os campos";
+		}
 
 		//verificando se houve um erro no cadastro
 		if (mysqli_query($conn, $sql)) {
