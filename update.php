@@ -12,7 +12,7 @@
 		$cpf = $_POST['cpf']; 
 		$senha = $_POST['senha'];
 		$id = $_POST['id'];
-
+		//verificar se existe valores vazios
 		if($nome != '' && $email != '' && $cpf != '' && $senha != '' ){
 		$sql ="UPDATE clientes SET nome = '$nome', email = '$email', cpf = '$cpf', senha = '$senha' 
 		WHERE id = '$id'";
