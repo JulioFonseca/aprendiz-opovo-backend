@@ -8,10 +8,18 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<?php 
+	//abrindo sessao para se comunicar entre os codigos
+		session_start();
+
 		require_once 'conexao.php'; 
 		$sql = "SELECT * FROM clientes";
 				$res = mysqli_query($conn, $sql); 
+				
+				if (isset($_SESSION['mensagem'])) {
 
+					echo $_SESSION['mensagem'];
+				}
+		
 	?>
 </head>
 <body>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>homer</title>
+	<title>Cadastro</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -29,9 +29,8 @@
                     <input type="password" name="senha" id="senha">
                     <label for="senha"> Senha</label>
                 </div>
-                <button type="submit" name="bnt-cadastrar" class="btn">CADASTRAR</button>
+                <button type="submit" name="btn-cadastrar" class="btn">CADASTRAR</button>
             </form>
-
         </div>
     </div>
 
