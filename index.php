@@ -66,8 +66,8 @@
                                 <p>Tem certeza que deseja excluir esse cliente?</p>
                             </div>
                             <div class="modal-footer">
-                                <form action="" method="post">
-                                    <!-- Buttons inside modal -->
+                                <form action="deletar.php" method="post">
+                                    <!-- formulario para mandar a informaçao ao deletar.php -->
                                     <input type="hidden" name="id" value="<?php echo $escrever['id'] ?>">
                                     <button type="submit" name="btn-deletar" class="btn red">Deletar</button>
                                     <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
@@ -80,10 +80,10 @@
 			}else {
 		?>
 			<tr>
-				<td>-----</td>
-				<td>-----</td>
-				<td>-----</td>
-				<td>-----</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
 			</tr>		
 		<?php 
 			} 
