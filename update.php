@@ -30,7 +30,7 @@
 		} else {
 		    // echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 				header('Location: index.php');
-			  $_SESSION['mensagem'] = "ERRO!! ao editar";
+			  $_SESSION['mensagem'] = "ERRO!! esses dados ja foram cadastrado";
 
 		}
 	}
