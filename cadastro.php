@@ -52,6 +52,7 @@
                     <label for="senha"> Senha</label>
                 </div>
                 <button type="submit" name="btn-cadastrar" class="btn">CADASTRAR</button>
+                <a href="index.php" class="btn green">CLIENTES</a>
             </form>
         </div>
     </div>
