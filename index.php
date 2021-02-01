@@ -14,12 +14,20 @@
 		require_once 'conexao.php'; 
 		$sql = "SELECT * FROM clientes";
 				$res = mysqli_query($conn, $sql); 
-				
+
 				if (isset($_SESSION['mensagem'])) {
 
-					echo $_SESSION['mensagem'];
+					?>
+		<script type="text/javascript">
+			window.onload = function() {
+				M.toast({
+					html: '<?php echo $_SESSION['mensagem']; ?>'
+				})
+			}
+		</script>
+	<?php
 				}
-		
+		session_unset();
 	?>
 </head>
 <body>
@@ -46,6 +54,9 @@
 				<td><?php echo $escrever['nome'] ?></td>
 				<td><?php echo $escrever['email'] ?></td>
 				<td><?php echo $escrever['cpf'] ?></td>
+				<td><?php echo $escrever['senha'] ?></td>
+				<!-- botao de editar e excluir -->
+				<td><?php echo $escrever['senha'] ?></td>
 				<td><?php echo $escrever['senha'] ?></td>
 			</tr>
 		<?php 			
