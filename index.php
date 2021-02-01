@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>homer</title>
+	<title>Home</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<?php 
 		require_once 'conexao.php'; 
 		$sql = "SELECT * FROM clientes";
 				$res = mysqli_query($conn, $sql); 
 
-				//if (mysqli_num_rows($res) > 0)
 	?>
 </head>
 <body>
-	<h3>Clientes</h3>
+	<div class="row">
+		<div class="col s12 m8 push-m2">
+			<h3 class="light">Clientes</h3>
 	<!--Tabela para READ Clientes-->
-	<table align="center" border="1">
+	<table class='striped'>
 		<thead>
 			<tr>
-				<td>Nome</td>
-				<td>email</td>
-				<td>cpf</td>
-				<td>senha</td>
+				<th>Nome</th>
+				<th>email</th>
+				<th>cpf</th>
+				<th>senha</th>
 			</tr>
 		</thead>
+			<tbody>
 				<?php 
 			if (mysqli_num_rows($res) > 0) {
 				while ($escrever = mysqli_fetch_array($res)) {
 				
-				?>
-				<tbody>
+				?>		
 			<tr>
 				<td><?php echo $escrever['nome'] ?></td>
 				<td><?php echo $escrever['email'] ?></td>
 				<td><?php echo $escrever['cpf'] ?></td>
 				<td><?php echo $escrever['senha'] ?></td>
 			</tr>
-		</tbody>
 		<?php 			
 						}
 			}else {
 		?>
-		<tbody>
 			<tr>
 				<td>-----</td>
 				<td>-----</td>
 				<td>-----</td>
 				<td>-----</td>
-			</tr>
-		</tbody>
+			</tr>		
 		<?php 
 			} 
-	?>		
+	?>
+		</tbody>		
 	</table>
 	<br>
 	<a href="cadastro.php" class="btn">CADASTRAR</a>
-
+		</div>
+	</div>
 </body>
 </html>
