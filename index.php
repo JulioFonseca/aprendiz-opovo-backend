@@ -56,7 +56,7 @@
 				<td><?php echo $escrever['cpf'] ?></td>
 				<td><?php echo $escrever['senha'] ?></td>
 				<!-- botao de editar e excluir -->
-				<td> <a href="" class='btn-floating orange'><i class='material-icons'>edit</i></a></td>
+				<td> <a href="editar.php?id=<?php echo $escrever['id'] ?>" class='btn-floating orange'><i class='material-icons'>edit</i></a></td>
 				<td> <a href="" class='btn-floating red'><i class='material-icons'>delete</i></a></td>
 			</tr>
 		<?php 			
