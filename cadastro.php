@@ -7,8 +7,9 @@
 	<?php require_once 'conexao.php'; ?>
 </head>
 <body>
-	<h3>Cadastrar</h3>
-		<form method="post" action="">
+	<h3 align="center">Cadastrar</h3>
+
+		<form method="post" action="inserir.php">
 			<h4>nome</h4>
 			<input type="text" name="nome">
 			<h4>email</h4>
@@ -18,11 +19,8 @@
 			<h4>senha</h4>
 			<input type="password" name="senha">
 			<br>
-			<button type="submit">cadastrar</button>
+			<button type="submit" name="btn-cadastrar">cadastrar</button>
 		</form>
-	
-	<br>
-	<a href="" class="btn" name="btn-cadastrar"></a>
 
 </body>
 </html>
