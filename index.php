@@ -7,6 +7,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 	<?php 
 		//abrindo sessao para se comunicar entre os codigos
 		session_start();
@@ -31,9 +33,10 @@
 	?>
 </head>
 <body>
+	<h2 align="center" class="light">Área do administrador</h2>
 	<div class="row">
 		<div class="col s12 m8 push-m2">
-			<h3 class="light">Clientes</h3>
+			<h4 class="light">Clientes</h4>
 	<!--Tabela para READ Clientes-->
 	<table class='striped'>
 		<thead>
