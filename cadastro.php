@@ -22,7 +22,7 @@
 		</form>
 	
 	<br>
-	<a href="" class="btn"></a>
+	<a href="" class="btn" name="btn-cadastrar"></a>
 
 </body>
 </html>
