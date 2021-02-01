@@ -9,10 +9,15 @@
 <body>
 	<h3>Cadastrar</h3>
 		<form method="post" action="">
+			<h4>nome</h4>
 			<input type="text" name="nome">
+			<h4>email</h4>
 			<input type="text" name="email">
+			<h4>cpf</h4>
 			<input type="text" name="cpf">
+			<h4>senha</h4>
 			<input type="password" name="senha">
+			<br>
 			<button type="submit">cadastrar</button>
 		</form>
 	
