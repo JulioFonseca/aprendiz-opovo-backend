@@ -94,7 +94,6 @@
 	<a href="cadastro.php" class="btn">CADASTRAR</a>
 		</div>
 	</div>
-	<?php include_once 'script.php'; ?>
-	 
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
