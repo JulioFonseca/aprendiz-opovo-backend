@@ -57,7 +57,23 @@
 				<td><?php echo $escrever['senha'] ?></td>
 				<!-- botao de editar e excluir -->
 				<td> <a href="editar.php?id=<?php echo $escrever['id'] ?>" class='btn-floating orange'><i class='material-icons'>edit</i></a></td>
-				<td> <a href="" class='btn-floating red'><i class='material-icons'>delete</i></a></td>
+				<td> <a href="#modal<?php echo $escrever['id'] ?>" class='btn-floating red modal-trigger'><i class='material-icons'>delete</i></a></td>
+
+				<!-- Estrutura Modal -->
+                        <div id="modal<?php echo $escrever['id'] ?>" class="modal">
+                            <div class="modal-content">
+                                <h4>OPA!</h4>
+                                <p>Tem certeza que deseja excluir esse cliente?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <form action="" method="post">
+                                    <!-- Buttons inside modal -->
+                                    <input type="hidden" name="id" value="<?php echo $escrever['id'] ?>">
+                                    <button type="submit" name="btn-deletar" class="btn red">Deletar</button>
+                                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+                                </form>
+                            </div>
+                        </div>
 			</tr>
 		<?php 			
 						}
@@ -78,5 +94,7 @@
 	<a href="cadastro.php" class="btn">CADASTRAR</a>
 		</div>
 	</div>
+	<?php include_once 'script.php'; ?>
+	 
 </body>
 </html>
